@@ -13,14 +13,15 @@ from random import randint
 
 
 # Begin your solution here...
-fortune = (randint(1,12))
+fortune = (randint(1 , 3))
 
 print("Your fortune cookie says... ")
-if fortune < 6:
+if fortune = 1:
     print("A beautiful, smart, and loving person will be coming into your life.") 
 else:
-    if fortune > 6:
+    if fortune = 2:
         print("Your life will be happy and peaceful.")
+    
     else:
         print("Soon life will become more interesting.")
 

@@ -7,7 +7,7 @@ __author__ = "730411656"
 how_much: int = int(input("Enter an int: "))
 
 if how_much % 7 == 0 and how_much % 2 == 0:
-    print("TARHEELS")
+    print("TAR HEELS")
 else:
     if how_much % 2 == 0:
         print("TAR") 
@@ -16,4 +16,3 @@ else:
             print("HEELS")
         else: 
             print("CAROLINA")
-
