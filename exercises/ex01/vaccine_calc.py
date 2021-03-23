@@ -22,14 +22,20 @@ from datetime import timedelta
 population: int = int(input("Population: ")) 
 Doses_administered: int = int(input("Doses administered: "))
 Doses_per_day: int = int(input("Doses per day: "))
-target_percent_vaccinated: int = int(input("Target percent vaccinated: "))
+tr_pr_v: int = int(input("Target percent vaccinated: "))
 
-target_population: int = population * (target_percent_vaccinated / 100)
+target_population: int = round(population * (tr_pr_v / 100))
 unvaccinated: int = (target_population * 2) - Doses_administered
-days_left: float = unvaccinated / Doses_per_day
+d_left: int = round(unvaccinated / Doses_per_day)
 
 today: datetime = datetime.today()
-calc_date: timedelta = timedelta(days_left)
-reach_date: datetime = today + calc_date
+calc_date: timedelta = timedelta(d_left)
+N_date: datetime = today + calc_date
 
-print("We will reach " + str(target_percent_vaccinated) + "% in " + str(days_left) + " days, which falls on " + reach_date.strftime("%B %d, %Y"))
+vac_op: str = str(tr_pr_v)
+dlef_op: str = str(d_left)
+str1op: str = "We will reach "
+str2op: str = "% vaccination in "
+str3op: str = " days which falls on "
+
+print(str1op + vac_op + str2op + dlef_op + str3op + N_date.strftime("%B %d, %Y"))
