@@ -46,8 +46,8 @@ def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     newrows: dict[str, list[str]] = {}
     for column in table:
         rows = []
-        if N >= len(table):
-            N = len(table)
+        if N >= len(table[column]):
+            N = len(table[column])
         for row in range(N):
             rows.append(table[column][row])
         newrows[column] = rows 
