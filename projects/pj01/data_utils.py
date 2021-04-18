@@ -71,3 +71,21 @@ def count(values: list[str]) -> dict[str, int]:
         else:
             keys[key] = 1
     return keys
+
+def masked(col: list[str], threshold: str) -> list[bool]:
+    """Masks a list into a list of bools first step of filtering."""
+    result: list[bool] = []
+    for item in col:
+            result.append(item == threshold)
+    return result
+
+
+def filter(col: list[bool], mask:list[bool]) -> list[str]:
+    """Filters the data, a list[bool] against list[bool]."""
+    result: list[bool] = []
+    for i in range(len(mask)):
+        if mask[i] == True and col[i] == True:
+            result.append(True)
+        else:
+            result.append(False)
+    return result
