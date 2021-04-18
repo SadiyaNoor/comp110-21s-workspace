@@ -1,4 +1,5 @@
 """Examples of object-oriented programming concepts."""
+"""Lesson notes."""
 
 class Point:
 
